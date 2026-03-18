@@ -1,0 +1,321 @@
+/* ================= VARIABLES D'OPTIMISATION ================= */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --primary-color: #0056b3;
+    --box-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --border-radius: 12px;
+    --spacing: 20px;
+    --hover-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Ombre très légère */
+}
+
+/* ================= RESET DE BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Évite que le padding casse les largeurs */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ================= NAVIGATION (FLEXBOX + STICKY) ================= */
+.header {
+    position: sticky; /* Garde le menu en haut au scroll */
+    top: 0;
+    background-color: var(--box-bg);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex; /* Flexbox activé */
+    justify-content: space-between; /* Espacement optimal entre logo et liens */
+    align-items: center; /* Centrage vertical */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px var(--spacing);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Espace entre les éléments du menu */
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ================= SECTIONS GLOBALES ================= */
+section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 var(--spacing);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* ================= PROJETS (FLEXBOX) ================= */
+.projets-container {
+    display: flex; /* Conteneur Flexbox */
+    flex-wrap: wrap; /* Les blocs retournent à la ligne si pas assez de place */
+    justify-content: center; /* Centrage des blocs sur la ligne */
+    gap: 25px; /* Espacement constant entre les items */
+}
+
+/* Classe standardisée pour les boîtes */
+.box {
+    background-color: var(--box-bg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    
+    /* flex-grow: 1, flex-shrink: 1, flex-basis: 300px */
+    flex: 1 1 300px; 
+    max-width: 350px; /* Empêche les blocs de devenir trop larges sur grands écrans */
+    
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet hover discret demandé */
+.box:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-3px);
+}
+
+.box h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* ================= FORMULAIRE (GRID) ================= */
+.contact-form {
+    display: grid; /* Utilisation de Grid */
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    gap: 20px;
+    
+    background-color: var(--box-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Les éléments qui doivent prendre toute la largeur de la grille (2 colonnes) */
+.option-group,
+.message-group,
+.submit-btn {
+    grid-column: 1 / -1; 
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #004494;
+}
+
+/* Responsive Grid : Passe à 1 colonne sur les petits écrans */
+@media (max-width: 600px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= FOOTER (FLEXBOX) ================= */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Texte à gauche, icônes à droite */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4da3ff;
+}
+/* ================= ANIMATION DE CHARGEMENT ================= */
+.loading-nav {
+    text-align: center;
+    padding: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Optionnel : Met en valeur le lien de la page où l'on se trouve */
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
+}
+/* ================= MODALE VIDÉO ================= */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 2000; /* Au-dessus du menu sticky */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Fond noir semi-transparent */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
+}
+/* ================= VARIABLES PAR DÉFAUT (MODE CLAIR) ================= */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --header-bg: #ffffff;
+    --box-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --primary-color: #0056b3;
+}
+
+/* ================= VARIABLES MODE SOMBRE ================= */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --box-bg: #1e1e1e;
+    --border-color: #333333;
+    --primary-color: #4da3ff;
+}
+
+/* Appliquer les variables aux éléments existants */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Transition douce */
+}
+
+.header, .box, .contact-form {
+    background-color: var(--box-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Style du bouton de switch (à ajouter dans le header) */
+.theme-switch {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

@@ -3,44 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes Projets | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon/icons8-accueil-50.png"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <title>Accueil | Mon Portfolio</title>
-    <link rel="stylesheet" href="general.css" />
   </head>
   <body>
-    <div id="header-placeholder"></div>
+    <header id="header-container" class="header">
+      <div class="loading-nav">Chargement du menu...</div>
+    </header>
 
     <main>
-      <section>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <h2>Présentation</h2>
-        <p>
-          Bonjour ! Je m'appelle
-          <strong
-            ><span class="data-prenom">...</span>
-            <span class="data-nom">...</span></strong
-          >. Je suis un passionné de nouvelles technologies et je me spécialise
-          en tant que <strong class="data-metier">...</strong>.
-        </p>
-        <p>
-          Ce site regroupe mon parcours professionnel, mes projets personnels
-          ainsi que mes divers centres d'intérêt. N'hésitez pas à parcourir les
-          différentes pages via le menu ci-dessus.
-        </p>
+      <section class="section-projets">
+        <h2>Mes Projets & Hobbies</h2>
+        <div class="projets-container">
+          <article class="box">
+            <h3>Projet 1</h3>
+            <p>Description courte de mon premier projet ou hobby.</p>
+          </article>
+          <article class="box">
+            <h3>Projet 2</h3>
+            <p>Description courte de mon deuxième projet ou hobby.</p>
+          </article>
+          <article class="box">
+            <h3>Projet 3</h3>
+            <p>Description courte de mon troisième projet ou hobby.</p>
+          </article>
+          <article class="box">
+            <h3>Projet 4</h3>
+            <p>Description courte de mon quatrième projet ou hobby.</p>
+          </article>
+          <article class="box">
+            <h3>Projet 5</h3>
+            <p>Description courte de mon cinquième projet ou hobby.</p>
+          </article>
+          <article class="box">
+            <h3>Projet 6</h3>
+            <p>Description courte de mon sixième projet ou hobby.</p>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>
-        &copy; <span class="data-annee">...</span>
-        <span class="data-prenom">...</span> <span class="data-nom">...</span>
-      </p>
-    </footer>
+    <footer id="footer-container" class="footer"></footer>
 
-    <script src="general.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
