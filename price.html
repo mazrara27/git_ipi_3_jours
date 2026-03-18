@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Mon Portfolio</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon/icons8-purse-50.png" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-large">
+      <h1>Les Services de <span class="data-prenom">...</span></h1>
+      <p>
+        Découvrez mes différentes offres adaptées à l'envergure de votre projet.
+      </p>
+
+      <div class="grid pricing-grid">
+        <section class="card pricing-card">
+          <h3>Offre Classic</h3>
+          <div class="prix">50€</div>
+          <p class="description-offre">
+            Un service classique idéal pour démarrer rapidement votre présence
+            en ligne.
+          </p>
+          <ul class="features-list">
+            <li>Création d'une page vitrine</li>
+            <li>Design responsif basique</li>
+            <li>Formulaire de contact simple</li>
+            <li>Livraison en 1 semaine</li>
+          </ul>
+          <button
+            class="btn-submit btn-pricing"
+            onclick="window.location.href = 'contact.html?offre=classic'"
+          >
+            Me contacter
+          </button>
+        </section>
+
+        <section class="card pricing-card highlight">
+          <h3>Offre Pro</h3>
+          <div class="prix">100€</div>
+          <p class="description-offre">
+            Un service complet qui amène plus de maintenance et d'optimisation à
+            votre projet.
+          </p>
+          <ul class="features-list">
+            <li>Site multi-pages (jusqu'à 5)</li>
+            <li>Design personnalisé</li>
+            <li>Optimisation SEO (Référencement)</li>
+            <li>1 mois de maintenance inclus</li>
+          </ul>
+          <button
+            class="btn-submit btn-pricing"
+            onclick="window.location.href = 'contact.html?offre=pro'"
+          >
+            Me contacter
+          </button>
+        </section>
+
+        <section class="card pricing-card">
+          <h3>Offre Ultra Pro</h3>
+          <div class="prix">Sur devis</div>
+          <p class="description-offre">
+            La solution ultime pour les projets sur mesure nécessitant un suivi
+            approfondi.
+          </p>
+          <ul class="features-list">
+            <li>Nombre de pages illimité</li>
+            <li>Design premium sur mesure</li>
+            <li>Boutique en ligne (E-commerce)</li>
+            <li>Maintenance et support 1 an</li>
+          </ul>
+          <button
+            class="btn-submit btn-pricing"
+            onclick="window.location.href = 'contact.html?offre=ultra'"
+          >
+            Me contacter
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span class="data-annee">...</span>
+        <span class="data-prenom">...</span> <span class="data-nom">...</span>
+      </p>
+    </footer>
+
+    <script src="general.js"></script>
+  </body>
+</html>

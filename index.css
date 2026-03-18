@@ -1,0 +1,16 @@
+/* Basic styling for a paragraph */
+body {
+  font-family: Arial, sans-serif; /* Clean font */
+  background-color: #f0f8ff; /* Light blue background */
+  padding: 10px; /* Space around content */
+}
+
+h1 {
+  color: #2c3e50; /* Dark blue text */
+  text-align: center; /* Center text */
+}
+
+p {
+  color: #3498db; /* Blue text */
+  margin: 10px 0; /* Space between paragraphs */
+}

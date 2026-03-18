@@ -1,0 +1,212 @@
+/* general.css */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    background-color: #f9f9f9; 
+    color: #333; 
+}
+
+header { background-color: #2c3e50; padding: 1rem 0; }
+
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+nav a { color: white; text-decoration: none; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
+
+main { 
+    flex: 1; 
+    padding: 2rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: center; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* Classe spécifique pour élargir le main sur la page portfolio */
+.main-large { max-width: 1000px; }
+
+section { 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    margin-bottom: 2rem; 
+}
+
+footer { 
+    background-color: #2c3e50; 
+    color: white; 
+    text-align: center; 
+    padding: 1rem 0; 
+    margin-top: auto; 
+}
+
+/* Styles spécifiques pour la grille du Portfolio */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+}
+
+section.card { 
+    padding: 1rem; 
+    text-align: center; 
+    margin-bottom: 0; /* Écrase la marge par défaut des sections */
+}
+
+img { 
+    max-width: 100%; 
+    border-radius: 5px; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* --- Styles pour le formulaire de contact --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 5px rgba(44, 62, 80, 0.3);
+}
+
+.btn-submit {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #1a252f;
+}
+
+/* --- Styles pour les cartes de Services/Tarifs --- */
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pousse le bouton vers le bas */
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mise en valeur de l'offre centrale */
+.pricing-card.highlight {
+    border: 2px solid #2c3e50;
+    transform: scale(1.05); /* La rend légèrement plus grande */
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card.highlight::before {
+    content: "Le plus populaire";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c3e50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.pricing-card.highlight:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.prix {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+.description-offre {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 50px; /* Aligne le texte si les descriptions n'ont pas la même taille */
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+    flex-grow: 1; /* Permet à la liste de prendre l'espace restant */
+}
+
+.features-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+/* On utilise un petit emoji check devant chaque élément de la liste */
+.features-list li::before {
+    content: "✓ ";
+    color: #27ae60; /* Vert pour valider */
+    font-weight: bold;
+}
+
+.btn-pricing {
+    width: 100%; /* Le bouton prend toute la largeur de la carte */
+    margin-top: auto; /* S'assure que le bouton reste collé en bas */
+}

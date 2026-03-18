@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/favicon/icons8-contact-téléphonique-50.png"
+    />
+    <title>Contact | Mon Portfolio</title>
+    <link rel="stylesheet" href="general.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section>
+        <h1>Me Contacter</h1>
+        <h2>Envoyez-moi un message</h2>
+        <p>
+          Remplissez le formulaire ci-dessous pour me contacter ou discuter d'un
+          projet.
+        </p>
+
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="nom">Votre Nom :</label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              required
+              placeholder="Jean Dupont"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Votre Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="jean@exemple.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre Message :</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Bonjour, j'aimerais vous parler de..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Envoyer le message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span class="data-annee">...</span>
+        <span class="data-prenom">...</span> <span class="data-nom">...</span>
+      </p>
+    </footer>
+
+    <script src="general.js"></script>
+  </body>
+</html>
