@@ -1,0 +1,27 @@
+body {
+    /*background-color: lightgrey;*/
+}
+
+.container {
+    background-color: white;
+    width: 83vh;
+  margin-left: 65vh;
+  height: 70vh;
+}
+
+img {
+    max-width: 400px;
+}
+
+h3 {
+    color: darkred;
+}
+.header {
+    box-sizing: content-box;
+    border-color: red white red white;
+    border-style: solid;
+
+}
+.presentation{
+    background-color: lightgray;
+}
