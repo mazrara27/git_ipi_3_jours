@@ -1,21 +1,19 @@
 .red{
     background-color: red;
-    
+    top: 30px;
+    left: 30px;
     
     
 }
 .blue{
     background-color: blue;
     position: relative;
-    top: -30vh;
-    right: -100px;
+
 
 }
 .green{
     background-color: green;
     position: relative;
-    top: -7vh;
-    left: 3vh;
     
 }
 .box{
@@ -28,12 +26,14 @@ border-width: 2px;
     border-color: black;
     border-style: solid;
     text-align: center;
+    position: absolute ;
     
 }
 .yellow{
     background-color: yellow;
     color: black;
     position: relative;
-    top: 100vh;
-    left: 100vh;
+    top: 0%;
+    left: 100%;
+
 }
