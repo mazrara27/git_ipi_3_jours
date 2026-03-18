@@ -1,0 +1,52 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.box {
+    border: 2px solid black;
+    /* Arrondit les angles (10px est une valeur standard, ajuste selon tes goûts) */
+    border-radius: 12px; 
+    
+    /* Ajoute une ombre : 
+       Décalage X (0), Décalage Y (4px), Flou (10px), Couleur (noir transparent) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Optionnel : un peu de padding pour que le contenu ne touche pas les bords arrondis */
+/* Ajoute 20px d'espace tout autour à l'intérieur de la bordure */
+    padding: 20px;
+}
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  background-color: red;
+
+
+}
+.two {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  background-color: lightgreen;
+}
+.three {
+  grid-column: 1 / 3 ;
+  grid-row: 4 / 5;
+  background-color: magenta;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+  
+}
+.five {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  background-color: lightblue;
+
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+  background-color: yellow;
+}

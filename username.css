@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f4f6;
+}
+
+.input-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Made the card a bit wider for the new inputs */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    text-align: center;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Grouping text inputs and textareas together for matching styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff;
+}
+
+/* Styles specifically for the text area so it doesn't stretch weirdly */
+textarea {
+    resize: vertical;
+}
+
+/* Slider Layout */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
