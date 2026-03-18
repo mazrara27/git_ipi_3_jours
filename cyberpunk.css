@@ -12,6 +12,9 @@ body {
 img {
     max-width: 400px;
 }
+h1{
+    text-align: center;
+}
 
 h3 {
     color: darkred;
@@ -24,4 +27,19 @@ h3 {
 }
 .presentation{
     background-color: lightgray;
+    text-align: center;
+}
+footer { 
+    background-color: #686b6e; 
+    color: white; 
+    text-align: center; 
+    padding: 1rem 0; 
+    margin-top: auto; 
+}
+#cyberpunk{
+    text-align: center;
+
+}
+#actors{
+    text-align: center;
 }

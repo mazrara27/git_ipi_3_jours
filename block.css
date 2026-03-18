@@ -1,0 +1,39 @@
+.red{
+    background-color: red;
+    
+    
+    
+}
+.blue{
+    background-color: blue;
+    position: relative;
+    top: -30vh;
+    right: -100px;
+
+}
+.green{
+    background-color: green;
+    position: relative;
+    top: -7vh;
+    left: 3vh;
+    
+}
+.box{
+width: 100px;
+height: 100px ;
+border-width: 2px;
+    border-radius: 10px ;
+    color: white;
+    padding: 15px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    
+}
+.yellow{
+    background-color: yellow;
+    color: black;
+    position: relative;
+    top: 100vh;
+    left: 100vh;
+}
